@@ -1,9 +1,14 @@
-package cn.lzy.mybatiscatalog;
+package cn.lzy.mybatiscatalog.jpa;
 
-public class Comment {
+import javax.persistence.*;
+@Entity(name = "t_comment")//映射的表名
+public class Discuss {
+    @Id//表示映射对应的主键id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)//设置主键自增策略
     private Integer id;
     private String content;
     private String author;
+    @Column(name = "a_id")//指定映射的表字段名
     private Integer aId;
 
     public Integer getId() {
@@ -18,8 +23,8 @@ public class Comment {
         return content;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setContent(String contnent) {
+        this.content = contnent;
     }
 
     public String getAuthor() {
@@ -40,12 +45,11 @@ public class Comment {
 
     @Override
     public String toString() {
-        return "Comment{" +
+        return "Discuss{" +
                 "id=" + id +
-                ", content='" + content + '\'' +
+                ", contnent='" + content + '\'' +
                 ", author='" + author + '\'' +
                 ", aId=" + aId +
                 '}';
     }
 }
-
