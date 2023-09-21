@@ -1,8 +1,8 @@
 package cn.lzy.customconfig;
 
-public class MyProperties {
-    public void getResult(){
+import org.springframework.beans.factory.annotation.Autowired;
 
-        System.out.println("MyProperties类加载成功！！");
-    }
+public class MyProperties {
+    private int id;
+    private String name;
 }
