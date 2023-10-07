@@ -26,4 +26,8 @@ public class ChapterJPATestApplication {
             System.out.println(optional.get());
         }
     }
+    @Test
+    public void deleteComment() {
+        discussReppository.deleteById(3);
+    }
 }

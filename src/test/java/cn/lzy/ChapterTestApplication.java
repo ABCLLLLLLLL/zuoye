@@ -10,7 +10,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.test.context.junit4.SpringRunner;
 
 
@@ -30,19 +35,21 @@ public class ChapterTestApplication {
     @Autowired
     Person person;
 
-    @Autowired
-    DBConnector dbConnector;
+//    @Autowired
+//    DBConnector dbConnector;
 
     @Test
     public void getHello() {
   /*      System.out.println( "----单元测试返回的数据11111111---------" + ChapterController.saHello());*/
-     /*   System.out.println("单元测试返回===="+student);*/
-        System.out.println(user);
-
-        System.out.println("单元测试返回的person数据---"+person);
-
-        System.out.println(dbConnector.config());
+//     /*   System.out.println("单元测试返回===="+student);*/
+//        System.out.println(user);
+//
+//        System.out.println("单元测试返回的person数据---"+person);
+//
+//        System.out.println(dbConnector.config());
+        System.out.println(student);
 
 
     }
+
 }
