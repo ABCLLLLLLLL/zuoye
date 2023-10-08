@@ -25,4 +25,5 @@ public interface DiscussReppository extends JpaRepository<Discuss,Integer> {
     @Query("delete t_comment c where c.id=?1")
     public int deleteDiscuss(Integer id);
 
+
 }
