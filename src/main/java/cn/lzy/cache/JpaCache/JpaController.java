@@ -1,9 +1,8 @@
 package cn.lzy.cache.JpaCache;
 
 import cn.lzy.mybatiscatalog.jpa.Discuss;
-import cn.lzy.mybatiscatalog.jpa.DiscussReppository;
+import cn.lzy.mybatiscatalog.jpa.DiscussRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,7 +14,7 @@ import java.util.Optional;
 public class JpaController {
 
     @Autowired
-    private DiscussReppository mDiscussRepository;
+    private DiscussRepository mDiscussRepository;
 
     @GetMapping("/gat/{id}")
     @Cacheable(cacheNames = "comment")

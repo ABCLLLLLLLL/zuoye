@@ -9,7 +9,7 @@ import javax.transaction.Transactional;
 
 import java.util.List;
 
-public interface DiscussReppository extends JpaRepository<Discuss,Integer> {
+public interface DiscussRepository extends JpaRepository<Discuss,Integer> {
 
     public List<Discuss> findByAuthorNotNull();
     @Query("select c from t_comment c where c.aId=?1")
