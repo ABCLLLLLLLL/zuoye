@@ -1,7 +1,7 @@
 package cn.lzy;
 
-import org.springframework.boot.SpringApplication;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.ServletComponentScan;
@@ -18,7 +18,7 @@ public class ChapterApplication {
     }*/
 
 @SpringBootApplication
-@EnableCaching
+@EnableCaching//开启Spring Boot基于注解的缓存管理支持
 @ServletComponentScan
 
 public class ChapterApplication extends SpringBootServletInitializer {

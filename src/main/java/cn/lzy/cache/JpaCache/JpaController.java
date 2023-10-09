@@ -16,12 +16,13 @@ public class JpaController {
 
     @Autowired
     private DiscussReppository mDiscussRepository;
-    @GetMapping("/get/{id}")
+
+    @GetMapping("/gat/{id}")
     @Cacheable(cacheNames = "comment")
-    public Discuss findById(@PathVariable("id") int comment_id){
-        Optional<Discuss> mOprional = mDiscussRepository.findById(comment_id);
-        if (mOprional.isPresent()){
-            return mOprional.get();
+    public Discuss findById(@PathVariable("id") int comment_id) {
+        Optional<Discuss> mOptional = mDiscussRepository.findById(comment_id);
+        if (mOptional.isPresent()) {
+            return mOptional.get();
         }
         return null;
     }
