@@ -1,6 +1,5 @@
-package cn.lzy.thymeleaf;
+package cn.lzy.Thymeleaf;
 
-import com.sun.xml.bind.v2.schemagen.xmlschema.LocalAttribute;
 import io.netty.util.internal.StringUtil;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

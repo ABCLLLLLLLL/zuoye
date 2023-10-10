@@ -1,4 +1,4 @@
-package cn.lzy.thymeleaf;
+package cn.lzy.Thymeleaf;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

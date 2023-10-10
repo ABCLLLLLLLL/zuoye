@@ -1,8 +1,14 @@
 package cn.lzy.mybatiscatalog.jpa;
 
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+
 import javax.persistence.*;
+import java.io.Serializable;
+import java.util.Optional;
+
 @Entity(name = "t_comment")//映射的表名
-public class Discuss {
+public class Discuss implements Serializable {
     @Id//表示映射对应的主键id
     @GeneratedValue(strategy = GenerationType.IDENTITY)//设置主键自增策略
     private Integer id;

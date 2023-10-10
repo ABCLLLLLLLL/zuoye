@@ -25,8 +25,8 @@ public class ChapterRedisTestApplication {
         person.setLastname("龙");
 
         Address address=new Address();
-        address.setCity("x");
-        address.setCountry("y");
+        address.setCity("zz");
+        address.setCountry("ll");
         person.setAddress(address);
 
         List<Family> list=new ArrayList<>();
@@ -37,6 +37,11 @@ public class ChapterRedisTestApplication {
         person.setFamilyList(list);
         Person personResult= repository.save(person);
         System.out.println(personResult);
+    }
+    @Test
+    public void selectPersion() {
+        List<Person> list = repository.findByAddress_City("zz");
+        System.out.println(list);
     }
 }
 
